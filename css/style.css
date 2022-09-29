@@ -81,11 +81,19 @@ header{
     margin-top: 4rem;
 }
 
-#ps-plus .ps-plus-logo{
+#ps-plus .ps-plus-logo,
+#ps-now .ps-now-logo{
     width: 250px;
     padding-top: 1rem;
     padding-bottom: 2rem;
 }
 /* /PSPLUS */
+
+/* PSNOW */
+#ps-now{
+    background-color: #161C3B;
+    color: white;
+}
+/* PSNOW */
 
 /* /MAIN */
