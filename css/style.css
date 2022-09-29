@@ -5,14 +5,77 @@ svg{
 }
 
 /* COMMON */
+
+:root{
+    --ms-primary: #2D64E6;
+}
+
 h1{
     margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+}
+
+h2{
+    font-size: 2.3rem;
+    margin: 1.5rem 0;
+}
+
+p{
+    font-size: 0.8rem;
+}
+
+
+.titling{
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.uptitle{
+    color:var(--ms-primary);
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.subtitle{
+    opacity: 0.6;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
 ul{
     list-style-type: none;
-    margin: 0;
-    
+    margin: 0;   
+}
+
+.ms_btn.red-btn{
+    background-color: #CD3D0F;
+    color: white;
+}
+
+.ms_btn.blue-btn{
+    background-color: var(--ms-primary);
+    color: white;
+}
+
+.ms_btn.white-btn{
+    background-color: white;
+    color: var(--ms-primary);
+    margin-top: 0.5rem;
+}
+
+.ms_btn{
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 50px;
+}
+
+.ms_disable{
+    opacity: 0.6;
+}
+
+.ms_active{
+    border-bottom: 2px solid #2D64E6;
 }
 
 /* HEADER */
@@ -31,6 +94,14 @@ header{
 .header-top .sony-logo{
     width: 80px;
 }
+
+/* media */
+@media screen and (min-width: 992px){
+    .text-wrapper{
+        width: 37%;
+    }
+    
+}
 /* /HEADER */
 
 /* MAIN */
@@ -41,6 +112,10 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     padding: 2rem 0;
+}
+
+.jumbo p{
+    margin-bottom: 2rem;
 }
 
 .jumbo1{
@@ -64,21 +139,63 @@ header{
 .jumbo h1{
     margin-top: 1rem;
 }
-
 /* /JUMBO */
+
+.ms_card-active{
+    border: 2px solid white;
+    box-shadow: 0px 0px 10px 0px #1b3d8c;
+}
+
 
 /* NEW GAMES */
 #new-games{
     background-color: #1F1F1F;
     color: white;
 }
+
+#new-games h2{
+    margin-top: 0;
+    padding-top: 2rem;
+}
 /* /NEW GAMES */
 
+/* PS5 */
+.ps5-products{
+    margin-bottom: 2rem;
+}
+
+.ms_prod-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0.5rem;
+}
+
+.ms_prod-card .product-name{
+    font-size: 0.6rem;
+    padding-top: 0.5rem;
+    text-align: center;
+}
+/* /PS5 */
 
 /* PS4 */
 #ps4 .card{
     border: 0;
 }
+
+#ps4 .card p{
+    opacity: 0.6;
+}
+
+.ms_ps4-card,
+.card-body{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+}
+
 /* PS4 */
 
 /* PSPLUS */
@@ -90,8 +207,19 @@ header{
 #ps-plus .ps-plus-logo,
 #ps-now .ps-now-logo{
     width: 250px;
-    padding-top: 1rem;
     padding-bottom: 2rem;
+}
+
+.little-jumbo-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 1rem 0;
+}
+
+.little-jumbo-text p{
+    font-size: 1rem;
 }
 /* /PSPLUS */
 
@@ -100,6 +228,7 @@ header{
     background-color: #161C3B;
     color: white;
     margin-top: 4rem;
+    padding: 1rem 0 2rem;
 }
 /* PSNOW */
 
@@ -108,6 +237,11 @@ header{
     max-width: 540px;
     margin-top: 4rem;
 }
+
+#socials h2{
+    text-align: center;
+    margin-bottom: 5rem;
+}
 /* /SOCIALS */
 
 /* /MAIN */
@@ -115,10 +249,18 @@ header{
 /* FOOTER */
 footer{
     background-color: #00439C;
-    padding: 3rem 0;
-    margin-top: 4rem;
+    padding: 4rem 0 1rem;
+    margin-top: 5rem;
     color: white;
     font-size: 0.8rem;
+}
+
+footer .country{
+    padding: 1.5rem 0;
+}
+
+footer .country i{
+    margin-right: 0.5rem;
 }
 
 footer ul a{
@@ -135,5 +277,10 @@ footer img{
 .footer-bot img{
     width: 150px;
     margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.footer-bot a{
+    color: white;
 }
 /* FOOTER */
