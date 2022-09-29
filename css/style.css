@@ -1,0 +1,15 @@
+/* reset */
+img,
+svg{
+    max-width: 100%;
+}
+
+/* HEADER */
+.header-top{
+    background-color: black;
+}
+
+.header-top .sony-logo{
+    width: 80px;
+}
+/* /HEADER */
