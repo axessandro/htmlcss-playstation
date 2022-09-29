@@ -93,7 +93,14 @@ header{
 #ps-now{
     background-color: #161C3B;
     color: white;
+    margin-top: 4rem;
 }
 /* PSNOW */
+
+/* SOCIALS */
+#socials .container{
+    max-width: 540px;
+}
+/* /SOCIALS */
 
 /* /MAIN */
