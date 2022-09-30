@@ -64,18 +64,29 @@ ul{
     margin-top: 0.5rem;
 }
 
+.ms_btn:not(.gray-btn):hover{
+    box-shadow:0px 0px 0px 2px rgb(255, 255, 255) inset;
+}
+
+.ms_btn.white-btn:hover{
+    box-shadow:0px 0px 0px 2px #888888 inset;
+
+}
+
+.ms_btn.gray-btn{
+    background-color: #363636;
+    color: white;
+}
+
 .ms_btn{
     padding: 0.5rem 1rem;
     text-decoration: none;
     border-radius: 50px;
+    border: 5px solid rgba(255, 255, 255, 0);  
 }
 
 .ms_disable{
     opacity: 0.6;
-}
-
-.ms_active{
-    border-bottom: 2px solid #2D64E6;
 }
 
 /* HEADER */
@@ -89,6 +100,14 @@ header{
 
 .header-top{
     background-color: black;
+}
+
+nav .dropdown-toggle::after{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f078";
+    border: 0;
+    vertical-align: middle;
 }
 
 .header-top .sony-logo{
@@ -132,8 +151,8 @@ header{
 }
 
 .jumbo1 img{
-    padding-top: 150px;
-
+    padding-top: 200px;
+    
 }
 
 .jumbo h1{
@@ -141,21 +160,53 @@ header{
 }
 /* /JUMBO */
 
+
 .ms_card-active{
     border: 2px solid white;
-    box-shadow: 0px 0px 10px 0px #1b3d8c;
+    box-shadow: 0px 0px 1px 4px #2D64E6;
+    height: 100%;
 }
 
+.carousel{
+    margin-top: 2rem;
+}
+
+.carousel .ms_card{
+    position: relative;
+}
+
+@media screen and (min-width: 768px) {
+        
+
+    .carousel:hover .ms_card{
+        opacity: 0.6;
+    }
+
+    .carousel .ms_card:hover{
+        opacity: 1;
+    }
+
+    .carousel .ms_card:hover img{
+        position: absolute;
+        top: -1rem;
+        left: 0;
+    }
+
+    .carousel .ms_card-active:hover {
+        box-shadow: none;
+    }
+
+}
 
 /* NEW GAMES */
 #new-games{
     background-color: #1F1F1F;
     color: white;
+    padding: 2rem 0;
 }
 
 #new-games h2{
     margin-top: 0;
-    padding-top: 2rem;
 }
 /* /NEW GAMES */
 
@@ -164,17 +215,47 @@ header{
     margin-bottom: 2rem;
 }
 
-.ms_prod-card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 0.5rem;
-}
 
 .ms_prod-card .product-name{
     font-size: 0.6rem;
     padding-top: 0.5rem;
     text-align: center;
+}
+
+.prod-col.ms_active{
+    border-bottom: 2px solid #2D64E6;
+}
+
+.ms_prod-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    opacity: 0.6;
+}
+/* -------------------------- */
+
+.ms_prod-card.ms_active{
+    opacity: 1;
+}
+
+.products:hover .ms_prod-card.ms_active{
+    opacity: 0.6;
+}
+
+.ms_prod-card:hover{
+    opacity: 1;
+}
+
+.products .ms_prod-card.ms_active:hover {
+    opacity: 1;
+}
+
+
+@media screen and (min-width: 768px){
+    .ms_prod-card img{
+        max-width: 50%;
+    }
 }
 /* /PS5 */
 
@@ -208,6 +289,11 @@ header{
 #ps-now .ps-now-logo{
     width: 250px;
     padding-bottom: 2rem;
+}
+#ps-plus img,
+#ps-now img{
+    max-width: 450px;
+    min-width: 250px;
 }
 
 .little-jumbo-text{
