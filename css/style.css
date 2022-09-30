@@ -24,7 +24,6 @@ p{
     font-size: 0.8rem;
 }
 
-
 .titling{
     text-align: center;
     margin-top: 4rem;
@@ -48,6 +47,7 @@ ul{
     margin: 0;   
 }
 
+/* buttons */
 .ms_btn.red-btn{
     background-color: #CD3D0F;
     color: white;
@@ -64,29 +64,44 @@ ul{
     margin-top: 0.5rem;
 }
 
-.ms_btn:not(.gray-btn):hover{
+.ms_btn:hover{
     box-shadow:0px 0px 0px 2px rgb(255, 255, 255) inset;
 }
 
-.ms_btn.white-btn:hover{
-    box-shadow:0px 0px 0px 2px #888888 inset;
+.gray-btn:hover{
+    box-shadow:0px 0px 0px 2px rgb(255, 255, 255) inset;
+    color: white;
 
 }
 
-.ms_btn.gray-btn{
+.ms_btn.white-btn:hover,
+.ms_btn.red-btn:hover{
+    box-shadow:0px 0px 0px 2px #000000 inset;
+    
+}
+
+.gray-btn{
     background-color: #363636;
     color: white;
-}
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0);  
+
+}   
 
 .ms_btn{
     padding: 0.5rem 1rem;
     text-decoration: none;
     border-radius: 50px;
-    border: 5px solid rgba(255, 255, 255, 0);  
+    border: 2px solid rgba(255, 255, 255, 0);  
 }
 
 .ms_disable{
     opacity: 0.6;
+    background-color: white;
+}
+
+.ms_disable:hover{
+    box-shadow:0px 0px 0px 2px #BEBCBB inset;
 }
 
 /* HEADER */
@@ -96,6 +111,10 @@ header{
     right: 0;
     width: 100%;
     z-index: 999;
+}
+
+.header-top .sony-logo{
+    width: 80px;
 }
 
 .header-top{
@@ -110,8 +129,48 @@ nav .dropdown-toggle::after{
     vertical-align: middle;
 }
 
-.header-top .sony-logo{
-    width: 80px;
+.navbar-nav .gray-btn{
+    margin: 0 1rem;
+}
+
+.ms_drop-menu{
+    display: none;
+    background-color: white;
+    width: 100%;
+    z-index: 999;
+    position: absolute;
+    top: 76px;
+    left: 0;
+}
+
+.ms_card-menu{
+    padding: 0.5rem;
+}
+
+.ms_card-menu:hover{
+    border-radius: 20px;
+    border: 2px solid #2D64E6;
+    
+}
+
+ul.link-giochi{
+    padding-left: 0;
+    list-style-type: disc;
+}
+
+.link-giochi li{
+    margin: 1rem 1rem;
+    color: var(--ms-primary);
+    font-size: 0.8rem;
+}
+
+.menu-prod{
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+.navbar:hover .ms_drop-menu{
+    display: block;
 }
 
 /* media */
@@ -119,7 +178,7 @@ nav .dropdown-toggle::after{
     .text-wrapper{
         width: 37%;
     }
-    
+
 }
 /* /HEADER */
 
@@ -208,6 +267,15 @@ nav .dropdown-toggle::after{
 #new-games h2{
     margin-top: 0;
 }
+
+.row-games:hover .game-card{
+    opacity: 0.6;
+}
+
+.row-games .game-card:hover{
+    opacity: 1;
+}
+
 /* /NEW GAMES */
 
 /* PS5 */
@@ -350,10 +418,15 @@ footer .country i{
 }
 
 footer ul a{
-    color: inherit;
+    color: white;
     text-decoration: none;
     font-size: inherit;
     line-height: 1.5rem;
+}
+
+footer ul a:hover{
+    color: white;
+    text-decoration: underline;
 }
 
 footer img{
